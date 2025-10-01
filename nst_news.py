@@ -124,20 +124,27 @@ if __name__ == "__main__":
 
     nst = NSTArticle()
     exit_code = 0
+    results = []
 
     if args.mode == 'highlights':
-        nst.scrape_index()
+        results = nst.scrape_index()
     elif args.mode == 'latest':
-        nst.scrape_latest()
+        results = nst.scrape_latest()
     elif args.mode == 'worlds':
-        nst.scrape_worlds()
+        results = nst.scrape_worlds()
     elif args.mode == 'search':
         if not args.query:
             print("Error: --query is required for search mode")
             exit_code = 1
-        nst.scrape_search_results(args.query, limit=args.limit)
+        results = nst.scrape_search_results(args.query, limit=args.limit)
     else:
         print("Invalid mode selected.")
         exit_code = 1
     nst.close()
+
+    # Print results
+    for message in results:
+        print(message)
+    
+    # Exit okay
     sys.exit(exit_code)
