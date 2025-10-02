@@ -9,6 +9,10 @@ This project demonstrates how to scrape articles from the NST website using Sele
     ```sh
     pip install -r requirements.txt
     ```
+    or
+    ```sh
+    pip install selenium beautifulsoup4
+    ```
 
 ## Demo
 Each command below runs the scraper in a different mode:
