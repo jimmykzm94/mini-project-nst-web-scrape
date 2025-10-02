@@ -3,6 +3,13 @@
 ## Description
 This project demonstrates how to scrape articles from the NST website using Selenium web driver and Beautifulsoup. It covers fetching web pages, parsing HTML content, and extracting relevant information.
 
+## Prerequisite
+- Python 3.12.8
+- Install Python packages
+    ```sh
+    pip install -r requirements.txt
+    ```
+
 ## Demo
 Each command below runs the scraper in a different mode:
 
